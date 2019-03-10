@@ -3,14 +3,16 @@ using System;
 using Cuscuzeria.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cuscuzeria.Infra.Data.Migrations
 {
     [DbContext(typeof(CuscuzeriaContext))]
-    partial class CuscuzeriaContextModelSnapshot : ModelSnapshot
+    [Migration("20190310194659_AddedUserConfiguration")]
+    partial class AddedUserConfiguration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -164,22 +166,13 @@ namespace Cuscuzeria.Infra.Data.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Email");
 
                     b.Property<DateTime>("LastOrder");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("Password");
 
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(150);
-
-                    b.Property<string>("UrlImg")
-                        .HasMaxLength(500);
+                    b.Property<string>("UrlImg");
 
                     b.Property<string>("Username")
                         .IsRequired()

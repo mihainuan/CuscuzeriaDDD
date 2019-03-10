@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Cuscuzeria.Domain.Enums;
+﻿using Cuscuzeria.Domain.Enums;
+using System;
 
 namespace Cuscuzeria.Domain.Entities
 {
