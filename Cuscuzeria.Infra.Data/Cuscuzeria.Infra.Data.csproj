@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190310221358_Added2NewFieldsOnUsers2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repositories\" />
   </ItemGroup>
 
