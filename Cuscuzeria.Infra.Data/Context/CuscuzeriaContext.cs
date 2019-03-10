@@ -9,15 +9,15 @@ namespace Cuscuzeria.Infra.Data.Context
     public class CuscuzeriaContext : DbContext
     {
         //Mapping Classes to Database Tables
-        public DbSet<Accompaniment> Accompaniments { get; set; }
-        public DbSet<Beverage> Beverages { get; set; }
-        public DbSet<Cuscuz> Cuscuz { get; set; }
-        public DbSet<Cuscuzeiro> Cuscuzeiros { get; set; }
-        public DbSet<Drink> Drinks { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<Promo> Promos { get; set; }
-        public DbSet<Type> Types { get; set; }
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<Accompaniment> Accompaniments { get; set; }
+        public virtual DbSet<Beverage> Beverages { get; set; }
+        public virtual DbSet<Cuscuz> Cuscuz { get; set; }
+        public virtual DbSet<Cuscuzeiro> Cuscuzeiros { get; set; }
+        public virtual DbSet<Drink> Drinks { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Promo> Promos { get; set; }
+        public virtual DbSet<Type> Types { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         //Mapping by Convention
         public CuscuzeriaContext(DbContextOptions options) : base(options)

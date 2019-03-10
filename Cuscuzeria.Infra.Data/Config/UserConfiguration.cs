@@ -9,6 +9,9 @@ namespace Cuscuzeria.Infra.Data.Config
         //Mapping DB fields configurations for Database (EntityFramework 6)
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            //Defines TableName
+            builder.ToTable("Usuarios");
+
             //Defines PK
             builder.HasKey(u => u.UserId);
             //Defines Column Name
