@@ -17,6 +17,11 @@ namespace Cuscuzeria.Infra.Data.Config
             //Defines field Size
             builder.Property(co => co.CuscuzeiroName).HasMaxLength(150);
             builder.Property(co => co.UrlImg).HasMaxLength(500);
+
+            //One-to-One Relationship (FK)
+            builder.HasOne(co => co.Order)
+                .WithOne(o => o.Cuscuzeiro)
+                .HasForeignKey<Order>(o => o.CuscuzeiroId);
         }
     }
 }

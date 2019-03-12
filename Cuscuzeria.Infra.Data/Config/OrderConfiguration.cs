@@ -13,6 +13,19 @@ namespace Cuscuzeria.Infra.Data.Config
             //Defines NOT NULL
             builder.Property(o => o.UserId).IsRequired();
             builder.Property(o => o.Delivered).IsRequired();
+
+            //One-to-Many Relationship (FK)
+            builder.HasMany(co => co.Cuscuzes)
+                .WithOne(o => o.Order);
+            builder.HasMany(d => d.Drinks)
+                .WithOne(o => o.Order);
+            builder.HasMany(b => b.Beverages)
+                .WithOne(o => o.Order);
+            builder.HasMany(p => p.Promo)
+                .WithOne(o => o.Order);
+
+
+
         }
     }
 }

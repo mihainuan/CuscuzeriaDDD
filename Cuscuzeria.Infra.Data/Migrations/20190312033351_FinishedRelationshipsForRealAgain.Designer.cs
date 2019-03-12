@@ -3,14 +3,16 @@ using System;
 using Cuscuzeria.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cuscuzeria.Infra.Data.Migrations
 {
     [DbContext(typeof(CuscuzeriaContext))]
-    partial class CuscuzeriaContextModelSnapshot : ModelSnapshot
+    [Migration("20190312033351_FinishedRelationshipsForRealAgain")]
+    partial class FinishedRelationshipsForRealAgain
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -126,7 +128,7 @@ namespace Cuscuzeria.Infra.Data.Migrations
 
                     b.Property<int>("OrderId");
 
-                    b.Property<DateTime?>("StartDate");
+                    b.Property<DateTime>("StartDate");
 
                     b.Property<string>("UrlImg")
                         .HasMaxLength(500);
@@ -181,7 +183,7 @@ namespace Cuscuzeria.Infra.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(500);
 
-                    b.Property<DateTime?>("EndsAt");
+                    b.Property<DateTime>("EndsAt");
 
                     b.Property<int>("OrderId");
 
@@ -190,7 +192,7 @@ namespace Cuscuzeria.Infra.Data.Migrations
                         .HasColumnName("Title")
                         .HasMaxLength(200);
 
-                    b.Property<DateTime?>("StartsAt");
+                    b.Property<DateTime>("StartsAt");
 
                     b.HasKey("PromoId");
 
@@ -228,7 +230,7 @@ namespace Cuscuzeria.Infra.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<DateTime?>("LastOrder");
+                    b.Property<DateTime>("LastOrder");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -249,21 +251,6 @@ namespace Cuscuzeria.Infra.Data.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Clients");
-
-                    b.HasData(
-                        new { UserId = 1, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 220, DateTimeKind.Local), Email = "mihai@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "mihai" },
-                        new { UserId = 2, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "yjqom@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "yjqom" },
-                        new { UserId = 3, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "ojbzg@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "ojbzg " },
-                        new { UserId = 4, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "sgdxp@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "sgdxp" },
-                        new { UserId = 5, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "tkolf@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "tkolf" },
-                        new { UserId = 6, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "jkgvb@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "jkgvb" },
-                        new { UserId = 7, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "wkint@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "wkint" },
-                        new { UserId = 8, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "zeozf@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "zeozf" },
-                        new { UserId = 9, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "ywabo@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "ywabo" },
-                        new { UserId = 10, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "qcrlf@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "qcrlf" },
-                        new { UserId = 11, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "wfqyd@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "wfqyd" },
-                        new { UserId = 12, CreatedAt = new DateTime(2019, 3, 12, 1, 2, 30, 221, DateTimeKind.Local), Email = "ekspr@email.com", LastOrder = new DateTime(2019, 3, 12, 0, 0, 0, 0, DateTimeKind.Local), Password = "SZ@111222", Phone = "+55719988-7733", Username = "ekspr" }
-                    );
                 });
 
             modelBuilder.Entity("Cuscuzeria.Domain.Drink", b =>

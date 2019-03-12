@@ -28,7 +28,6 @@ namespace Cuscuzeria.Infra.Data.Context
         //Mapping by Configuration (EF6)
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             //Configuration of 'accompaniments'
             modelBuilder.ApplyConfiguration(new AccompanimentConfiguration());
 

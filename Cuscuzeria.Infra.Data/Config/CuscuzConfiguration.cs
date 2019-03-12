@@ -17,6 +17,10 @@ namespace Cuscuzeria.Infra.Data.Config
             //Defines field Size
             builder.Property(cu => cu.CuscuzName).HasMaxLength(150);
             builder.Property(cu => cu.Description).HasMaxLength(500);
+
+            //One-to-Many Relationship (FK)
+            builder.HasMany(a => a.Accompaniments)
+                .WithOne(c => c.Cuscuz);
         }
     }
 }
