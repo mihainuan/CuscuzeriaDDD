@@ -9,7 +9,7 @@ namespace Cuscuzeria.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
-        protected CuscuzeriaContext Db = new CuscuzeriaContext();
+        protected CuscuzeriaContext Db = new CuscuzeriaContext(null);
 
         public void Add(TEntity obj)
         {
