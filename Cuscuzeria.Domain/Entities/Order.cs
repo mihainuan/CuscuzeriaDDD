@@ -7,8 +7,6 @@ namespace Cuscuzeria.Domain.Entities
     public class Order
     {
         public int OrderId { get; set; }
-
-
         public int CuscuzeiroId { get; set; }
         public int UserId { get; set; }
 
@@ -20,6 +18,8 @@ namespace Cuscuzeria.Domain.Entities
         public StatusEnum OrderStatus { get; set; }
         public DateTime OrderCreation { get; set; }
         public bool Delivered { get; set; }
+
+        public decimal OrderTotal { get; set; }
 
         //FK (one-to-one)
         public virtual Cuscuzeiro Cuscuzeiro { get; set; }
