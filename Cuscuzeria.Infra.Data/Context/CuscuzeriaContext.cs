@@ -25,6 +25,11 @@ namespace Cuscuzeria.Infra.Data.Context
 
         }
 
+        public CuscuzeriaContext()
+        {
+
+        }
+
         //Mapping by Configuration (EF6)
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
