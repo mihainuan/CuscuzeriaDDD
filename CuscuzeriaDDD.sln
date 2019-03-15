@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cuscuzeria.Application", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cuscuzeria.API", "Cuscuzeria.API\Cuscuzeria.API.csproj", "{FDCEDED7-32B1-4D24-A224-8D9D7705362E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuscuzeriaDDD.MVC", "CuscuzeriaDDD.MVC\CuscuzeriaDDD.MVC.csproj", "{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cuscuzeria.MVC", "CuscuzeriaDDD.MVC\Cuscuzeria.MVC.csproj", "{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
