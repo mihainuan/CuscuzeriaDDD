@@ -50,10 +50,11 @@ namespace CuscuzAdmin.Controllers
 
         public IActionResult Login(string email, string password)
         {
-            DataTable dt = connDB.GetData($"SELECT * FROM cuscuzeriadb.clients WHERE Email = '{email}'");
+            DataTable dt = connDB.GetData($"SELECT * FROM clients WHERE Email = '{email}'");
             if (dt.Rows.Count > 0)
             {
-                if (dt.Rows[0]["Password"].ToString() == EncodeString.MD5HashCryptography(password))
+                //if (dt.Rows[0]["Password"].ToString() == EncodeString.MD5HashCryptography(password))
+                if (dt.Rows[0]["Password"].ToString() == password)
                 {
                     HttpContext.Session.SetString("login", "1");
                     return View("Index");
@@ -75,6 +76,12 @@ namespace CuscuzAdmin.Controllers
             }
 
             return result;
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return View("Login");
         }
     }
 }

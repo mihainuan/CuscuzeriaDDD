@@ -2,7 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\CuscuzAdmin\bower_components\**" />
+    <Content Remove="wwwroot\CuscuzAdmin\bower_components\**" />
+    <EmbeddedResource Remove="wwwroot\CuscuzAdmin\bower_components\**" />
+    <None Remove="wwwroot\CuscuzAdmin\bower_components\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
