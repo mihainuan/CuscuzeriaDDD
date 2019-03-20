@@ -51,8 +51,10 @@ namespace CuscuzAdmin.Controllers
         public IActionResult Login(string email, string password)
         {
             DataTable dt = connDB.GetData($"SELECT * FROM clients WHERE Email = '{email}'");
+            //If e-mail exists
             if (dt.Rows.Count > 0)
             {
+                //If password exists
                 //if (dt.Rows[0]["Password"].ToString() == EncodeString.MD5HashCryptography(password))
                 if (dt.Rows[0]["Password"].ToString() == password)
                 {
