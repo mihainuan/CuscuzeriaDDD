@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cuscuzeria.API", "Cuscuzeri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cuscuzeria.MVC", "CuscuzeriaDDD.MVC\Cuscuzeria.MVC.csproj", "{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CuscuzAdmin", "CuscuzAdmin\CuscuzAdmin.csproj", "{C7EC75D4-13DA-4901-996E-77660F2FC04A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7EC75D4-13DA-4901-996E-77660F2FC04A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7EC75D4-13DA-4901-996E-77660F2FC04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7EC75D4-13DA-4901-996E-77660F2FC04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7EC75D4-13DA-4901-996E-77660F2FC04A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{51EAC914-13CF-4300-BC49-1BFA5FACF8D6} = {758A154D-5B40-4BE4-B5C4-F4294D221D42}
 		{FDCEDED7-32B1-4D24-A224-8D9D7705362E} = {A65DF518-51C3-4596-B7D1-8BAACE813C6E}
 		{BB5B1221-8C14-4CC5-B8D2-439CA93C6E27} = {B1DEAD99-0F9A-4DE1-86C1-2814A106367D}
+		{C7EC75D4-13DA-4901-996E-77660F2FC04A} = {B1DEAD99-0F9A-4DE1-86C1-2814A106367D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71EEC54B-29C2-4BB9-9553-EB94B233C5E8}
