@@ -28,7 +28,7 @@ namespace Cuscuzeria.MVC.DB
 
         public void ExecuteQuery(string _sqlCommand)
         {
-            MySqlCommand command = new MySqlCommand("", mysqlconnection);
+            MySqlCommand command = new MySqlCommand("Server=localhost;userid=root;password=mihai;database=CuscuzeriaDB;", mysqlconnection);
             command.CommandText = _sqlCommand;
             command.CommandType = CommandType.Text;
             command.Connection = mysqlconnection;

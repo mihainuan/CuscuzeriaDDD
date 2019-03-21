@@ -20,14 +20,14 @@ namespace Cuscuzeria.Infra.Data.Context
         public virtual DbSet<User> Users { get; set; }
 
         //Mapping by Convention
-        public CuscuzeriaContext(DbContextOptions options) : base(options)
-        {
-
-        }
-        //public CuscuzeriaContext()
+        //public CuscuzeriaContext(DbContextOptions options) : base(options)
         //{
 
         //}
+        public CuscuzeriaContext()
+        {
+
+        }
 
         //Mapping by Configuration (EF6)
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -61,6 +61,14 @@ namespace Cuscuzeria.Infra.Data.Context
 
             //Apply configurations
             base.OnModelCreating(modelBuilder);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseMySql("Server=localhost;userid=root;password=mihai;database=CuscuzeriaDB;");
+            }
         }
     }
 }
