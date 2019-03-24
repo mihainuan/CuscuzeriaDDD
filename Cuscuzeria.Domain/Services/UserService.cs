@@ -1,5 +1,6 @@
 ﻿using Cuscuzeria.Domain.Entities;
 using Cuscuzeria.Domain.Interfaces.Repositories;
+using System.Collections.Generic;
 
 namespace Cuscuzeria.Domain.Services
 {
@@ -11,6 +12,11 @@ namespace Cuscuzeria.Domain.Services
             : base(userRepository)
         {
             _userRepository = userRepository;
+        }
+
+        public IEnumerable<User> FindByEmail(string email)
+        {
+            return _userRepository.FindByEmail(email);
         }
     }
 }
